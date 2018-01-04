@@ -1,6 +1,6 @@
 const getUserMedia = require('getusermedia')
 
-getUserMedia({ video: true, audio: false }, function (err, stream) {
+getUserMedia({ video: true, audio: true }, function (err, stream) {
   if (err) return console.error(err)
 
   let Peer = require('simple-peer')
