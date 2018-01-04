@@ -1,10 +1,10 @@
-var getUserMedia = require('getusermedia')
+const getUserMedia = require('getusermedia')
 
 getUserMedia({ video: true, audio: false }, function (err, stream) {
   if (err) return console.error(err)
 
-  var Peer = require('simple-peer')
-  var peer = new Peer({
+  let Peer = require('simple-peer')
+  let peer = new Peer({
     initiator: location.hash === '#init',
     trickle: false,
     stream: stream
@@ -15,7 +15,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
   })
 
   document.getElementById('connect').addEventListener('click', function () {
-    var otherId = JSON.parse(document.getElementById('otherId').value)
+    let otherId = JSON.parse(document.getElementById('otherId').value)
     peer.signal(otherId)
   })
 
@@ -29,7 +29,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
   })
 
   peer.on('stream', function (stream) {
-    var video = document.createElement('video')
+    let video = document.createElement('video')
     document.body.appendChild(video)
 
     video.src = window.URL.createObjectURL(stream)
