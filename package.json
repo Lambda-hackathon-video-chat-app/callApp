@@ -1,0 +1,25 @@
+{
+    "name": "callapp",
+    "version": "1.0.0",
+    "description": "Video Chat App for Lambda School 2018 Hackathon",
+    "main": "index.js",
+    "scripts": {
+        "start": "budo index.js:bundle.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/metten0/callApp.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/metten0/callApp/issues"
+    },
+    "homepage": "https://github.com/metten0/callApp#readme",
+    "dependencies": {
+        "budo": "^10.0.4",
+        "simple-peer": "^8.2.0",
+        "watchify": "^3.9.0"
+    }
+}
